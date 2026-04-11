@@ -36,6 +36,7 @@ app.use('/api/bookings', bookingsRoutes);
 app.use('/api/mood', moodRoutes);
 app.use('/api/gamification', gamificationRoutes);
 app.use('/api/networking', networkingRoutes);
+app.use('/api/seed', require('./routes/seed'));
 
 // Root
 app.get('/', (req, res) => {
