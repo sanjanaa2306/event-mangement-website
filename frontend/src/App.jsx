@@ -40,7 +40,11 @@ function App() {
     fetch('/api/events')
       .then(res => res.json())
       .then(data => {
-        setEvents(data);
+        if (Array.isArray(data)) {
+          setEvents(data);
+        } else {
+          console.error("API Error:", data);
+        }
         setLoading(false);
       })
       .catch(err => {
