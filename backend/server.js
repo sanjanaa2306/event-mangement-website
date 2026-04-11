@@ -37,6 +37,7 @@ app.use('/api/mood', moodRoutes);
 app.use('/api/gamification', gamificationRoutes);
 app.use('/api/networking', networkingRoutes);
 app.use('/api/seed', require('./routes/seed'));
+app.use('/api/fix-images', require('./routes/fix-images'));
 
 // Root
 app.get('/', (req, res) => {
