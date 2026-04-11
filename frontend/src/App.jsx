@@ -231,6 +231,7 @@ function App() {
             key={refreshKey} 
             user={user} 
             onEventClick={setSelectedEvent} 
+            onBrowseEvents={() => setView('explore')}
           />
         )}
 

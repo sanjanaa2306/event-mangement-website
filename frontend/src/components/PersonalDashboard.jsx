@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Ticket, Star, TrendingUp, Calendar, ChevronRight, Loader2, Users } from 'lucide-react';
 
-export default function PersonalDashboard({ user, onEventClick }) {
+export default function PersonalDashboard({ user, onEventClick, onBrowseEvents }) {
   const [bookings, setBookings] = useState([]);
   const [leaderboard, setLeaderboard] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -53,7 +53,7 @@ export default function PersonalDashboard({ user, onEventClick }) {
           </p>
           <div className="flex gap-4 mt-8">
             <button 
-              onClick={() => window.location.reload()}
+              onClick={onBrowseEvents}
               className="bg-primary hover:bg-opacity-90 px-8 py-3 rounded-xl font-bold text-white transition-all shadow-lg shadow-primary/30 text-sm uppercase tracking-widest"
             >
               Browse Events
