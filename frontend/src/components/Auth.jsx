@@ -20,9 +20,8 @@ const Auth = ({ onLoginSuccess }) => {
         setError('');
         setLoading(true);
 
-        const baseUrl = 'https://your-new-render-url.onrender.com'; // REPLACE THIS LATER!
-        const url = isLogin ? `${baseUrl}/api/auth/login` : `${baseUrl}/api/auth/register`;
-        
+        const url = isLogin ? '/api/auth/login' : '/api/auth/register';
+
         const body = isLogin 
             ? { email: formData.email, password: formData.password }
             : { name: formData.name, email: formData.email, password: formData.password };
